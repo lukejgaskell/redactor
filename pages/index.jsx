@@ -48,7 +48,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Redactor 9001</h1>
-        <div className="mt-3 mb-3 w-3/4 inline-block pl-3 pr-3">
+        <div className="mt-3 mb-3 w-full md:w-3/4 inline-block pl-3 pr-3">
           <input
             onChange={(e) => setWordsToRedact(e.target.value)}
             value={wordsToRedact}
