@@ -3,6 +3,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 function redactText(wordsToRedact, text) {
+  if (wordsToRedact.length === 0) return text;
+
   const regex = new RegExp(`\\b(${wordsToRedact.join("|")})\\b`, "g");
 
   const result = text.replace(regex, (v) => {
