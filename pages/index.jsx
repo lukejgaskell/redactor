@@ -8,7 +8,7 @@ function redactText(wordsToRedact, text) {
 
   if (groupingsToRedact.length === 0) return text;
 
-  const regex = new RegExp(`\\b(${groupingsToRedact.join("|")})\\b`, "g");
+  const regex = new RegExp(`\\b(${groupingsToRedact.join("|")})\\b`, "gi");
 
   const result = text.replace(regex, (v) => {
     console.log(v);
